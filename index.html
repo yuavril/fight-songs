@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Can You Chant This?</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Archivo+Black&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<header>
+  <div class="label">DATA VISUALIZATION · COLLEGE FIGHT SONGS</div>
+
+
+  <div class="title-stickers">
+    <div class="sticker can">Can</div>
+    <div class="sticker you">You</div>
+    <div class="sticker chant">Chant</div>
+    <div class="sticker this">This?</div>
+  </div>
+
+
+  <p>
+    College fight songs are meant to be shouted, clapped, and repeated by thousands of fans.
+    This project explores tempo, duration, and lyrical tropes that make songs easy to chant.
+  </p>
+</header>
+
+
+<section>
+  <div class="viz-container">
+    <div class="receipt">
+      ANALYSIS ID: 025<br />
+      METRIC: CHANTABILITY<br />
+      UNITS: BPM × SEC
+    </div>
+
+
+    <button id="prev-graph">◀</button>
+    <button id="next-graph">▶</button>
+
+
+    <div id="graph-container"></div>
+
+
+    <div class="caption"></div>
+  </div>
+
+
+  <div class="static-captions">
+  <div class="caption-box">
+    <h4>Caption 1</h4>
+    <p>The distribution for the duration of fight songs has a bimodal appearance,
+  with most songs clustered around centers of approximately 75 BPM and 150 BPM.
+  BPM does not appear to have a strong correlation with duration: songs with a higher BPM
+  (i.e. a quicker tempo) still largely fall into the common range of a duration between
+  approximately 20 seconds and 120 seconds. Texas A&M, with a song duration of 172 seconds,
+  is a noticeable outlier. They do say that everything is bigger in Texas!</p>
+  </div>
+  <div class="caption-box">
+    <h4>Caption 2</h4>
+    <p> The Big Ten has the highest median song duration and the widest overall spread. The ACC and Pac-12 fall in the middle, with moderate medians and some outliers. The Big 12 and SEC tend to have shorter median durations, though the SEC includes a notable long-duration outlier that increases its overall range. The Independent category does not have enough data to be fully comparable. A substantial amount of overlap between these boxes means that we cannot claim that one conference has meaningfully longer songs than others, but the trends do suggest that the Big Ten tends towards longer songs, and the Big 12 and SEC towards shorter ones.</p>
+  </div>
+  <div class="caption-box">
+    <h4>Caption 3</h4>
+    <p>“win/won,” “victory,” and “fight” have the largest arcs, indicating they are the most common concepts overall. They also have the thickest connections between each other, showing that songs emphasizing winning, quite naturally, emphasize fighting and victory. “spelling” has a noticeable presence and strong links to “win/won” and “fight,” suggesting that spelling out team names is frequently paired with competitive language rather than standing alone. “colors” and “rah” appear moderately often and connect broadly, acting as supportive elements instead of as a central message.</p>
+  </div>
+</div>
+
+
+  <div class="score-explainer">
+    <div class="card tempo">
+      <h3>Tempo</h3>
+      <p>Chants work best near marching tempo, where crowds stay synchronized.</p>
+    </div>
+    <div class="card repetition">
+      <h3>Repetition</h3>
+      <p>Spelling, repeated words, and nonsense syllables reduce cognitive load.</p>
+    </div>
+    <div class="card duration">
+      <h3>Duration</h3>
+      <p>Shorter songs loop more naturally during games.</p>
+    </div>
+    <div class="card language">
+      <h3>Language</h3>
+      <p>References to fighting, winning, and opponents build collective energy.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  Data: College Fight Song Dataset • Visualization & analysis by Avril Yu
+</footer>
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="graphs.js"></script>
+
+
+</body>
+</html>

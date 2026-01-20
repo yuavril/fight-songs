@@ -1,0 +1,357 @@
+:root {
+  --red: #d62828;
+  --blue: #1f4fd8;
+  --yellow: #f6c90e;
+  --black: #111111;
+  --cream: #f4f1ec;
+  --white: #ffffff;
+}
+
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--black);
+  font-family: 'Oswald', sans-serif;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.025),
+      rgba(0,0,0,0.025) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+header {
+  position: relative;
+  padding: 4rem 6rem 3rem;
+  max-width: 1200px;
+  margin: auto;
+  z-index: 1;
+}
+
+
+.label {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--black);
+  box-shadow: 2px 2px 0 var(--black);
+}
+
+
+.title-stickers {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+
+.sticker {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  font-size: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+  border: 4px solid var(--white);
+  box-shadow: 5px 5px 0 var(--black);
+}
+
+
+.sticker.can {
+  background: var(--red);
+  color: var(--white);
+  font-family: 'Archivo Black', sans-serif;
+  transform: rotate(-2deg);
+}
+
+
+.sticker.you {
+  background: var(--white);
+  color: var(--black);
+  transform: rotate(1.5deg);
+}
+
+
+.sticker.chant {
+  background: var(--blue);
+  color: var(--white);
+  font-family: 'Archivo Black', sans-serif;
+  transform: rotate(-1deg);
+}
+
+
+.sticker.this {
+  background: var(--yellow);
+  color: var(--black);
+  transform: rotate(2deg);
+}
+
+
+header p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.95rem;
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+
+.viz-container {
+  position: relative;
+  background: var(--white);
+  border: 4px solid var(--black);
+  padding: 1.5rem 2rem;
+  box-shadow: 6px 6px 0 var(--black);
+}
+
+
+.receipt {
+  position: absolute;
+  top: -1.2rem;
+  right: 1.5rem;
+  background: var(--white);
+  border: 2px solid var(--black);
+  padding: 0.4rem 0.6rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  line-height: 1.3;
+  box-shadow: 3px 3px 0 var(--black);
+}
+
+
+.viz-container::after {
+  content: "♩  ♫  ♪";
+  position: absolute;
+  bottom: 1rem;
+  right: 1.25rem;
+  font-size: 1.8rem;
+  opacity: 0.35;
+}
+
+
+.caption {
+  margin-top: 1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+
+#graph-container {
+  height: 600px;
+  min-height: 500px;
+  width: 100%;
+}
+
+
+#prev-graph,
+#next-graph {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: var(--yellow);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+#prev-graph {
+  left: 1rem;
+}
+
+
+#next-graph {
+  right: 1rem;
+}
+
+
+.score-explainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+
+.card {
+  padding: 1.5rem;
+  border: 3px solid var(--black);
+  box-shadow: 5px 5px 0 var(--black);
+}
+
+
+.card.tempo {
+  background: var(--red);
+  color: var(--white);
+}
+
+
+.card.repetition {
+  background: var(--white);
+}
+
+
+.card.duration {
+  background: var(--blue);
+  color: var(--white);
+}
+
+
+.card.language {
+  background: var(--yellow);
+}
+
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+
+.card p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+
+footer {
+  padding: 3rem 6rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  position: relative;
+  z-index: 1;
+}
+
+
+.plotly .main-svg {
+  background: none !important;
+}
+
+
+.plotly .axis text {
+  font-family: 'Archivo Black', sans-serif !important;
+  fill: var(--black) !important;
+  font-size: 12px !important;
+}
+
+
+.plotly .plot-title {
+  font-family: 'Archivo Black', sans-serif !important;
+  fill: var(--red) !important;
+  font-size: 20px !important;
+}
+
+
+.plotly .bar {
+  stroke: var(--black);
+  stroke-width: 1px;
+}
+
+
+.plotly .heatmap rect {
+  stroke: #111;
+  stroke-width: 0.5px;
+}
+
+
+.plotly .scattertext text {
+  font-family: 'Archivo Black', sans-serif !important;
+  fill: var(--black) !important;
+}
+
+
+.plotly .hoverlayer path,
+.plotly .hoverlayer line {
+  stroke-width: 1.5px !important;
+}
+
+
+@media (max-width: 900px) {
+  header, section, footer {
+    padding: 2rem;
+  }
+  .sticker {
+    font-size: 3.2rem;
+  }
+  .score-explainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.static-captions {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 6rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+
+.caption-box {
+  flex: 1;
+  background: var(--white);
+  border: 2px solid var(--black);
+  box-shadow: 3px 3px 0 var(--black);
+  padding: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-width: 200px;
+  transform: rotate(-2deg)
+}
+
+
+.caption-box:nth-child(2) {
+  transform: rotate(1.5deg);
+}
+
+
+.caption-box:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+
+.caption-box h4 {
+  margin-top: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
