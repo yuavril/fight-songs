@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const csvUrl = 'fight-songs-updated.csv';
-  const palette = ['#d62828', '#f6c90e', '#1f4fd8', '#90caf9', '#ffea94', '#ff8b8b', '#a8998c', '#3d3a3a'];
+  const palette = ['#d62828', '#f6c90e', '#1f4fd8', '#90caf9', '#ffea94', '#ff8b8b', '#7bf677', '#3d3a3a', "#169e1b"];
 
 
   Papa.parse(csvUrl, {
