@@ -338,20 +338,28 @@ footer {
   transform: rotate(-2deg)
 }
 
-
-.caption-box:nth-child(2) {
-  transform: rotate(1.5deg);
-}
-
-
-.caption-box:nth-child(3) {
-  transform: rotate(-1deg);
-}
-
-
 .caption-box h4 {
   margin-top: 0;
   font-size: 1rem;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.caption-box p {
+  margin: 0.5rem 0 0 0;
+}
+
+.static-captions .caption-box:nth-child(1) {
+  box-shadow: 6px 6px 0 #d62828;
+  transform: rotate(-2deg);
+}
+
+.static-captions .caption-box:nth-child(2) {
+  box-shadow: 6px 6px 0 #f6c90e;
+  transform: rotate(1.5deg);
+}
+
+.static-captions .caption-box:nth-child(3) {
+  box-shadow: 6px 6px 0 #1f4fd8;
+  transform: rotate(-1deg);
 }
